@@ -10,18 +10,14 @@
 </template>
 
 <script>
-// import BaseTitlesContainer from '@/components/ui/BaseTitlesContainer/BaseTitlesContainer.vue';
 export default {
   name: 'BlockAbout',
-  // components: {
-  //   BaseTitlesContainer
-  // }
 }
 
 </script>
 
 <style>
-.block-about {
+/* .block-about {
   width: 100vw;
-}
+} */
 </style>
