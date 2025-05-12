@@ -6,8 +6,8 @@
   ></Component> -->
 
   <div :class="['titles-container', alignTitlesContClass]">
-    <h3 class="heading-thirdly text-gray">{{ subtitle }}</h3>
-    <h2 class="heading-secondary">{{ title }}</h2>
+    <h2 class="heading-thirdly text-gray">[{{ subtitle }}]</h2>
+    <h3 class="heading-secondary">{{ title }}</h3>
   </div>
 </template>
 
@@ -34,9 +34,12 @@ export default {
 </script>
 
 <style>
-/* .titles-container {
-  margin: 28px 0 28px 0;
-} */
+.titles-container {
+  margin-bottom: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
 .titles-container_align-left {
   text-align: left;
 }
