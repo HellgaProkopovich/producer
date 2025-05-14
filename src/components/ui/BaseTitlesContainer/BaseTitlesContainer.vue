@@ -7,7 +7,11 @@
 
   <div class="titles-container" :class="[alignTitlesContClass]">
     <h2 class="heading-thirdly text-gray">[{{ title }}]</h2>
-    <h3 class="heading-secondary">{{ subtitle }}</h3>
+    <!-- <h3 class="heading-secondary">{{ subtitle }}</h3> -->
+    <h3 class="heading-secondary">
+      <span class="titles-container_linebreak">{{ subtitle.split('|')[0] }}</span>
+      <span class="titles-container_linebreak">{{ subtitle.split('|')[1] }}</span>
+    </h3>
   </div>
 </template>
 
@@ -54,4 +58,13 @@ export default {
 .titles-container_align-right {
   text-align: right;
 }
+
+.titles-container_linebreak {
+  display: inline;
+
+  @media screen and (max-width: $sizeMobile) {
+    display: block;
+  }
+}
+
 </style>
