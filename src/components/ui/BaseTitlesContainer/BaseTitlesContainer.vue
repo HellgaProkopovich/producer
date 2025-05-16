@@ -7,11 +7,10 @@
 
   <div class="titles-container" :class="[alignTitlesContClass]">
     <h2 class="heading-thirdly text-gray">[{{ title }}]</h2>
-    <!-- <h3 class="heading-secondary">{{ subtitle }}</h3> -->
-    <h3 class="heading-secondary">
-      <span class="titles-container_linebreak">{{ subtitle.split('|')[0] }}</span>
-      <span class="titles-container_linebreak">{{ subtitle.split('|')[1] }}</span>
+    <h3 class="heading-secondary" v-if="$slots.subtitle">
+      <slot name="subtitle" />
     </h3>
+
   </div>
 </template>
 
@@ -24,9 +23,9 @@ export default {
       type: String,
     },
 
-    subtitle: {
-      type: String,
-    },
+    // subtitle: {
+    //   type: String,
+    // },
 
     align: {
       type: String,
@@ -45,10 +44,14 @@ export default {
 
 <style>
 .titles-container {
-  margin-bottom: 28px;
+  margin-bottom: 48px;
   display: flex;
   flex-direction: column;
   gap: 8px;
+
+  @media screen and (max-width: $sizeMobile) {
+    margin-bottom: 24px;
+  }
 }
 
 .titles-container_align-left {
@@ -66,5 +69,4 @@ export default {
     display: block;
   }
 }
-
 </style>
