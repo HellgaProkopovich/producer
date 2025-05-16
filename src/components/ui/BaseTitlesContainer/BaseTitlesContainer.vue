@@ -7,6 +7,8 @@
 
   <div class="titles-container" :class="[alignTitlesContClass]">
     <h2 class="heading-thirdly text-gray">[{{ title }}]</h2>
+
+    <h3 class="heading-secondary" v-if="subtitle" />
     <h3 class="heading-secondary" v-if="$slots.subtitle">
       <slot name="subtitle" />
     </h3>
@@ -23,9 +25,9 @@ export default {
       type: String,
     },
 
-    // subtitle: {
-    //   type: String,
-    // },
+    subtitle: {
+      type: String,
+    },
 
     align: {
       type: String,

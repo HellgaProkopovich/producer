@@ -3,12 +3,14 @@
     <div class="blockabout blockabout__container">
       <div class="blockabout__textsection">
         <div class="blockabout__text">
+
           <BaseTitlesContainer title="Обо мне">
             <template #subtitle>
               <span class="blockabout__subtitle titles-container_linebreak">Уникален не я, </span>
               <span class="blockabout__subtitle titles-container_linebreak">а мой опыт</span>
             </template>
           </BaseTitlesContainer>
+
           <p class="text-l text-black">
             Годы в Премьер и Высшей Лиге КВН, сценаристика, реклама, документалистика, работа с художниками, фестивалями, диджеинг, йога — и параллельно проекты для бизнеса, государства, стартапов и IT.
             <br><br>
