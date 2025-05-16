@@ -1,26 +1,32 @@
 <template>
-  <BaseContainer :theme="containerTheme">
-    <div class="blockabout blockabout__container">
-      <div class="blockabout__textsection">
-        <div class="blockabout__text">
-
-          <BaseTitlesContainer title="Обо мне">
+  <BaseContainer :theme="containerTheme" class="block-about">
+    <div class="block-about__container">
+      <div class="block-about__text-section">
+        <div class="block-about__text">
+          <BaseTitlesContainer title="Обо мне" class="block-about__title">
             <template #subtitle>
-              <span class="blockabout__subtitle titles-container_linebreak">Уникален не я, </span>
-              <span class="blockabout__subtitle titles-container_linebreak">а мой опыт</span>
+              <span>Уникален не я, </span>
+              <span>а мой опыт</span>
             </template>
           </BaseTitlesContainer>
 
-          <p class="text-l text-black">
-            Годы в Премьер и Высшей Лиге КВН, сценаристика, реклама, документалистика, работа с художниками, фестивалями, диджеинг, йога — и параллельно проекты для бизнеса, государства, стартапов и IT.
-            <br><br>
-            Этот опыт дал мне сеть нестандартно мыслящих людей, чьи таланты я привлекаю под идею и задачу.
+          <p class="text-l text-black block-about__text-indent">
+            Годы в Премьер и Высшей Лиге КВН, сценаристика, реклама, документалистика, работа с
+            художниками, фестивалями, диджеинг, йога — и параллельно проекты для бизнеса,
+            государства, стартапов и IT.
           </p>
-          <BaseButton href="" size="small" class="blockabout__btn">Портфолио</BaseButton>
+
+          <p class="text-l text-black">
+            Этот опыт дал мне сеть нестандартно мыслящих людей, чьи таланты я привлекаю под идею и
+            задачу.
+          </p>
+
+          <BaseButton href="" size="small" class="block-about__btn">Портфолио</BaseButton>
         </div>
       </div>
-      <div class="bloclabout__imgsection">
-        <img class="blockabout__img" src="./assets/img_blockabout.png" alt="img about producer">
+
+      <div class="block-about__img-section">
+        <img class="block-about__img" src="./assets/img_about.png" alt="img about producer" />
       </div>
     </div>
   </BaseContainer>
@@ -28,61 +34,69 @@
 
 <script>
 export default {
-  name: 'BlockAbout',
+  name: 'block-about',
 
   data() {
     return {
-      isMobile: false
+      isMobile: false,
     }
   },
+
   computed: {
     containerTheme() {
       return this.isMobile ? 'light' : 'dark'
-    }
+    },
   },
+
   mounted() {
     this.checkScreen()
     window.addEventListener('resize', this.checkScreen)
   },
+
   beforeUnmount() {
     window.removeEventListener('resize', this.checkScreen)
   },
+
   methods: {
     checkScreen() {
-      this.isMobile = window.innerWidth <= 768
-    }
-  }
+      this.isMobile = window.innerWidth <= 1200
+    },
+  },
 }
 </script>
 
-<style>
-.blockabout {
+<style lang="postcss">
+.block-about {
   $sizeTablet: 1200px;
+
+  overflow: hidden;
 }
 
-.blockabout__container {
+.block-about__container {
   display: flex;
   position: relative;
   z-index: 0;
 
-  @media screen and (max-width: $sizeMobile) {
+  @media screen and (max-width: $sizeTablet) {
     flex-direction: column;
   }
 }
 
-.blockabout__textsection {
+.block-about__text-section {
   background-color: var(--color-gray-30);
   position: relative;
   flex: 1 1 60%;
   padding-top: 40px;
 
-  @media screen and (max-width: $sizeMobile) {
-    width: 100vw;
+  @media screen and (max-width: $sizeTablet) {
+    margin: -15px -15px;
+    padding: 15px;
   }
 }
-.blockabout__textsection::before {
+
+.block-about__text-section::before {
   background-color: var(--color-gray-30);
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   right: 0;
@@ -90,30 +104,34 @@ export default {
   height: 100%;
   z-index: -1;
 
-  @media screen and (max-width: $sizeMobile) {
-    bottom: 0;
-    width: 150%;
+  @media screen and (max-width: $sizeTablet) {
+    content: none;
   }
 }
 
-.blockabout__subtitle {
+.block-about__title {
   color: var(--color-black);
-  white-space: nowrap;
-}
-
-.blockabout__text {
-  width: 60%; /* 522px; */
-  max-width: 522px;
-  padding-right: 40px;
+  margin-bottom: 40px;
 
   @media screen and (max-width: $sizeMobile) {
-    width: 95%;
-    max-width: none;
-    padding-right: 10px;
+    margin-bottom: 24px;
   }
 }
 
-.blockabout__btn {
+.block-about__text {
+  padding-right: 38%;
+
+  @media screen and (max-width: $sizeTablet) {
+    padding-right: initial;
+    max-width: 522px;
+  }
+}
+
+.block-about__text-indent {
+  margin-bottom: 30px;
+}
+
+.block-about__btn {
   width: 197px;
   margin-top: 75px;
   margin-bottom: 75px;
@@ -125,32 +143,28 @@ export default {
   }
 }
 
-.bloclabout__imgsection {
+.block-about__img-section {
   background-color: var(--color-black);
-  /* min-width: 430px; */
   flex: 1 1 28%;
   padding-top: 40px;
 
-  @media screen and (max-width: $sizeMobile) {
-    background-color: var(--color-white);
-    position: relative;
-    width: 100vw;
-    min-width: unset;
+  @media screen and (max-width: $sizeTablet) {
+    background-color: initial;
     padding-top: 10px;
+    display: flex;
   }
 }
 
-.blockabout__img {
-  /* position: absolute;
-  right: 0; */
-  transform: translateX(-43%);
+.block-about__img {
+  transform: translateX(-40%);
   max-width: 738px;
   width: 170%;
 
-  @media screen and (max-width: $sizeMobile) {
-    /* position: relative; */
+  @media screen and (max-width: $sizeTablet) {
     transform: none;
-    width: 95%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 </style>

@@ -12,7 +12,6 @@
     <h3 class="heading-secondary" v-if="$slots.subtitle">
       <slot name="subtitle" />
     </h3>
-
   </div>
 </template>
 
@@ -46,14 +45,10 @@ export default {
 
 <style>
 .titles-container {
-  margin-bottom: 48px;
+  margin-bottom: 24px;
   display: flex;
   flex-direction: column;
   gap: 8px;
-
-  @media screen and (max-width: $sizeMobile) {
-    margin-bottom: 24px;
-  }
 }
 
 .titles-container_align-left {
@@ -64,11 +59,9 @@ export default {
   text-align: right;
 }
 
-.titles-container_linebreak {
-  display: inline;
-
-  @media screen and (max-width: $sizeMobile) {
-    display: block;
-  }
+.heading-secondary {
+  display: inline-flex;
+  flex-wrap: wrap;
+  column-gap: 12px;
 }
 </style>
