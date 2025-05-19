@@ -1,7 +1,12 @@
 <template>
   <BaseContainer class="block-services">
     <div class="block-services__container">
-      <BaseTitlesContainer align="right" title="Услуги" subtitle="Основные направления" class="block-services__title">
+      <BaseTitlesContainer
+        align="right"
+        title="Услуги"
+        subtitle="Основные направления"
+        class="block-services__title"
+      >
       </BaseTitlesContainer>
 
       <div class="block-services__services-section">
@@ -10,7 +15,9 @@
             <use xlink:href="#icon-pen" />
           </svg>
           <p class="block-services__service-title text-s text-w700">Креативные концепции</p>
-          <p class="block-services__service-description text-3xs">Глубоко вникаю в суть задачи и создаю текст, сценарии, концепции и план</p>
+          <p class="block-services__service-description text-3xs">
+            Глубоко вникаю в суть задачи и создаю текст, сценарии, концепции и план
+          </p>
         </div>
 
         <div class="block-services__service-item">
@@ -18,7 +25,9 @@
             <use xlink:href="#icon-star" />
           </svg>
           <p class="block-services__service-title text-s text-w700">Продюсирование</p>
-          <p class="block-services__service-description text-3xs">Организую  съёмку под ключ: команда, процессы, результат и контроль</p>
+          <p class="block-services__service-description text-3xs">
+            Организую съёмку под ключ: команда, процессы, результат и контроль
+          </p>
         </div>
 
         <div class="block-services__service-item">
@@ -26,7 +35,9 @@
             <use xlink:href="#icon-smile" />
           </svg>
           <p class="block-services__service-title text-s text-w700">Ивенты</p>
-          <p class="block-services__service-description text-3xs">Креативная и техническая поддержка событий: от идеи до атмосферы</p>
+          <p class="block-services__service-description text-3xs">
+            Креативная и техническая поддержка событий: от идеи до атмосферы
+          </p>
         </div>
 
         <div class="block-services__service-item">
@@ -34,7 +45,9 @@
             <use xlink:href="#icon-clock" />
           </svg>
           <p class="block-services__service-title text-s text-w700">Мозговые штурмы</p>
-          <p class="block-services__service-description text-3xs">Направляю команды в процессе поиска решений и креатива</p>
+          <p class="block-services__service-description text-3xs">
+            Направляю команды в процессе поиска решений и креатива
+          </p>
         </div>
       </div>
 
@@ -54,7 +67,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="postcss">
 .block-services__container {
   padding-top: 92px;
   padding-bottom: 120px;
@@ -66,7 +79,7 @@ export default {
 }
 
 .block-services__title {
-    margin-bottom: 80px;
+  margin-bottom: 80px;
 
   @media screen and (max-width: $sizeMobile) {
     margin-bottom: 64px;
@@ -80,8 +93,13 @@ export default {
   margin-bottom: 40px;
   border-bottom: 1px solid var(--color-primary);
 
+  @media screen and (max-width: 900px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
   @media screen and (max-width: $sizeMobile) {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     gap: 40px;
     padding-bottom: 102px;
     margin-bottom: 24px;
@@ -103,11 +121,11 @@ export default {
 }
 
 .block-services__btn {
-  width: 197px;
+  max-width: 197px;
   margin-top: 40px;
 
   @media screen and (max-width: $sizeMobile) {
-    width: 194px;
+    max-width: 194px;
   }
 }
 </style>
