@@ -10,13 +10,13 @@
             </template>
           </BaseTitlesContainer>
 
-          <p class="text-l text-black block-about__text-indent">
+          <p class="text-l text-black block-about__text block-about__text-indent">
             Годы в Премьер и Высшей Лиге КВН, сценаристика, реклама, документалистика, работа с
             художниками, фестивалями, диджеинг, йога — и параллельно проекты для бизнеса,
             государства, стартапов и IT.
           </p>
 
-          <p class="text-l text-black">
+          <p class="text-l block-about__text text-black">
             Этот опыт дал мне сеть нестандартно мыслящих людей, чьи таланты я привлекаю под идею и
             задачу.
           </p>
@@ -124,6 +124,10 @@ export default {
   @media screen and (max-width: $sizeTablet) {
     padding-right: initial;
     max-width: 522px;
+  }
+
+  @media screen and (max-width: $sizeMobile) {
+    font-size: var(--size-text-xs);
   }
 }
 
