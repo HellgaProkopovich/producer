@@ -10,44 +10,15 @@
       </BaseTitlesContainer>
 
       <div class="block-services__services-section">
-        <div class="block-services__service-item">
-          <svg class="block-services__service-img">
-            <use xlink:href="#icon-pen" />
-          </svg>
-          <p class="block-services__service-title text-s text-w700">Креативные концепции</p>
-          <p class="block-services__service-description text-3xs">
-            Глубоко вникаю в суть задачи и создаю текст, сценарии, концепции и план
-          </p>
-        </div>
+        <div
+          v-for="(service, index) in servicesList"
+          :key="index"
+          class="block-services__service-item"
+        >
+          <SvgIcon :name="service.name" :size="20" class="block-services__service-img" />
 
-        <div class="block-services__service-item">
-          <svg class="block-services__service-img">
-            <use xlink:href="#icon-star" />
-          </svg>
-          <p class="block-services__service-title text-s text-w700">Продюсирование</p>
-          <p class="block-services__service-description text-3xs">
-            Организую съёмку под ключ: команда, процессы, результат и контроль
-          </p>
-        </div>
-
-        <div class="block-services__service-item">
-          <svg class="block-services__service-img">
-            <use xlink:href="#icon-smile" />
-          </svg>
-          <p class="block-services__service-title text-s text-w700">Ивенты</p>
-          <p class="block-services__service-description text-3xs">
-            Креативная и техническая поддержка событий: от идеи до атмосферы
-          </p>
-        </div>
-
-        <div class="block-services__service-item">
-          <svg class="block-services__service-img">
-            <use xlink:href="#icon-clock" />
-          </svg>
-          <p class="block-services__service-title text-s text-w700">Мозговые штурмы</p>
-          <p class="block-services__service-description text-3xs">
-            Направляю команды в процессе поиска решений и креатива
-          </p>
+          <p class="block-services__service-title text-s text-w700">{{ service.title }}</p>
+          <p class="block-services__service-description text-3xs">{{ service.description }}</p>
         </div>
       </div>
 
@@ -64,6 +35,33 @@
 <script>
 export default {
   name: 'block-services',
+
+  computed: {
+    servicesList() {
+      return [
+        {
+          name: 'pen',
+          title: 'Креативные концепции',
+          description: 'Глубоко вникаю в суть задачи и создаю текст, сценарии, концепции и план',
+        },
+        {
+          name: 'star',
+          title: 'Продюсирование',
+          description: 'Организую съёмку под ключ: команда, процессы, результат и контроль',
+        },
+        {
+          name: 'smile',
+          title: 'Ивенты',
+          description: 'Креативная и техническая поддержка событий: от идеи до атмосферы',
+        },
+        {
+          name: 'clock',
+          title: 'Мозговые штурмы',
+          description: 'Направляю команды в процессе поиска решений и креатива',
+        },
+      ]
+    },
+  },
 }
 </script>
 
@@ -107,8 +105,6 @@ export default {
 }
 
 .block-services__service-img {
-  width: 20px;
-  height: 20px;
   margin-bottom: 15px;
 
   @media screen and (max-width: $sizeMobile) {
