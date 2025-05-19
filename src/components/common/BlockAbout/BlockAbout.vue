@@ -21,7 +21,7 @@
             задачу.
           </p>
 
-          <BaseButton href="" size="small" class="block-about__btn">Портфолио</BaseButton>
+          <BaseButton href="https://docs.google.com/presentation/d/19Qhdi8mnNJEgEIKN8O-7NqRhBYQnq1Cd-QV_YvZkKtQ/edit?usp=sharing" target="_blank" size="small" class="block-about__btn">Портфолио</BaseButton>
         </div>
       </div>
 
