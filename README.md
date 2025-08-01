@@ -1,7 +1,7 @@
 # Producer Landing Page
 This project is a landing page for a producer, developed as a team in May. We built the project with a component-based approach, splitting the work into sections and shared UI components to speed up the process and keep the codebase clean.
 
-The result of the work here: glebpetrov.vh78.hosterby.com
+The result of the work here: [glebpetrov.vh78.hosterby.com](glebpetrov.vh78.hosterby.com)
 
 ## What was done overall
 - Built core UI components: buttons, containers, titles, icons, etc.
