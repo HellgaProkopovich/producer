@@ -3,6 +3,12 @@ This project is a landing page for a producer, developed as a team in May. We bu
 
 The result of the work here: [glebpetrov.vh78.hosterby.com](glebpetrov.vh78.hosterby.com)
 
+## Tech stack
+- Vue 3
+- Vite
+- PostCSS with postcss-simple-vars
+- Vuelidate for form validation
+
 ## What was done overall
 - Built core UI components: buttons, containers, titles, icons, etc.
 - Developed key sections: Header, MainSection, AboutSection, ServicesSection, CasesSection, ContactForm, and Footer.
@@ -11,13 +17,9 @@ The result of the work here: [glebpetrov.vh78.hosterby.com](glebpetrov.vh78.host
 - Added form validation with Vuelidate.
 
 ## My contributions
-- Implemented and adapted AboutSection and ServicesSection, including complex backgrounds and element alignments.
-- Refactored the TitlesContainer component: added slot support and flexible title alignment (left/right).
+- Implemented and adapted `AboutSection` and `ServicesSection`, including complex backgrounds and element alignments.
+- Refactored the `TitlesContainer` component: added slot support and flexible title alignment (left/right).
 - Configured container themes (light/dark) based on device type and added pseudo-elements for background extensions.
 - Fixed multiple issues with responsive layout and mobile-friendly title wrapping.
 
-## Tech stack
-- Vue 3
-- Vite
-- PostCSS with postcss-simple-vars
-- Vuelidate for form validation
+![HellgaProkopovich-landingpage-demo](https://github.com/user-attachments/assets/8520e2fe-a082-4179-86b6-921b0dde20de)
