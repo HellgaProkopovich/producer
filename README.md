@@ -23,3 +23,9 @@ The result of the work here: [glebpetrov.vh78.hosterby.com](glebpetrov.vh78.host
 - Fixed multiple issues with responsive layout and mobile-friendly title wrapping.
 
 ![HellgaProkopovich-landingpage-demo](https://github.com/user-attachments/assets/8520e2fe-a082-4179-86b6-921b0dde20de)
+
+## Thanks for all contributors
+
+<a href="https://github.com/sunnyfur/producer/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=sunnyfur/producer" />
+</a>
